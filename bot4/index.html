@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Адаптивный чат-бот на клиентском JavaScript" />
+    <title>Чат-бот</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="chat" aria-label="Чат с ботом">
+      <h1 class="chat__title">Чат-бот</h1>
+
+      <section class="chat__messages" id="messages" aria-live="polite" aria-label="История сообщений"></section>
+
+      <form class="chat__form" id="chatForm" autocomplete="off">
+        <label class="visually-hidden" for="messageInput">Введите сообщение</label>
+        <input
+          class="chat__input"
+          id="messageInput"
+          name="message"
+          type="text"
+          placeholder="Введите сообщение"
+          maxlength="500"
+          aria-label="Введите сообщение"
+        />
+        <button class="chat__send" id="sendButton" type="submit" aria-label="Отправить сообщение" disabled>
+          <svg class="chat__send-icon" aria-hidden="true" viewBox="0 0 512 512" focusable="false">
+            <path fill="currentColor" d="M476 3.2L12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z" />
+          </svg>
+        </button>
+      </form>
+    </main>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>
